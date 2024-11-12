@@ -24,7 +24,7 @@ def on_submit():
     # print the puzzle after it is done
     
 
-    if solver(puzzle): # checks if puzzle is solved 
+    if solver(puzzle):
         print("Solved Puzzle: ")
         generate_text()
         display_solution()
@@ -34,8 +34,8 @@ def on_submit():
 def display_solution():
     for i in range(9):
         for j in range(9):
-            entries[i][j].delete(0, tk.END) # amake sure there is nothing in display
-            entries[i][j].insert(0, str(puzzle[i][j])) # put solved numbers into display
+            entries[i][j].delete(0, tk.END)
+            entries[i][j].insert(0, str(puzzle[i[j]]))
 
 def generate_text():
     pprint(puzzle)
